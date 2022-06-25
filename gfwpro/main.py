@@ -39,8 +39,8 @@ def create_cnxn():
     cnxn = pyodbc.connect(driver='{ODBC Driver 18 for SQL Server}',
                 server='127.0.0.1,1433',
                 database='gfwpro',
-                uid='sa',
-                pwd='R@@t123456',
+                uid='GFWProUser',
+                pwd='measure2010!',
                 TrustServerCertificate='yes')
     return cnxn
 
