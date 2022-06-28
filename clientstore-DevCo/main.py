@@ -75,12 +75,12 @@ def execute_scripts_line(script_path):
                     continue
     cnxn.close();
 
-#create_files = get_scripts('./create_table', reverse=True)
-#print("Found {} tables".format(len(create_files)))
-#for file in tqdm(create_files):
-#    print(file)
-#    execute_scripts('./create_table/' + file)
-#print("Create Table Done")
+create_files = get_scripts('./create_table', reverse=True)
+print("Found {} tables".format(len(create_files)))
+for file in tqdm(create_files):
+    print(file)
+    execute_scripts('./create_table/' + file)
+print("Create Table Done")
 
 procedure_files = get_scripts('./procedure')
 print("Found {} procedures".format(len(procedure_files)))
@@ -88,10 +88,10 @@ for file in tqdm(procedure_files):
     execute_scripts_procedure('./procedure/' + file)
 print("Procedure Table Done")
 
-#data_files = get_scripts('./data')
-#print("Found {} files to insert data".format(len(data_files)))
-#for file in tqdm(data_files):
-#    execute_scripts_line('./data/' + file)
-#print("Insert Table Done")
+data_files = get_scripts('./data')
+print("Found {} files to insert data".format(len(data_files)))
+for file in tqdm(data_files):
+    execute_scripts_line('./data/' + file)
+print("Insert Table Done")
 
 # import pdb; pdb.set_trace()
